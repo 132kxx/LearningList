@@ -12,7 +12,11 @@ struct MainView: View {
     @State var viewCount: Int = 0
     
     var body: some View {
-        ZStack {
+        VStack {
+            HeaderView()
+            
+            Spacer()
+            
             switch viewCount {
             case 0:
                 HomeView()
@@ -23,6 +27,9 @@ struct MainView: View {
             default:
                 HomeView()
             }
+            
+            Spacer()
+            Spacer()
             
             FooterView(viewCount: $viewCount)
         }

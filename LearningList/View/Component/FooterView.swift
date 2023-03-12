@@ -13,8 +13,6 @@ struct FooterView: View {
     
     var body: some View {
         VStack {
-            Spacer()
-            
             HStack(alignment: .center, spacing: 100) {
                 VStack(spacing: 5) {
                     Image(systemName: "house")
@@ -29,8 +27,6 @@ struct FooterView: View {
                     viewCount = 0
                 }
 
-
-           
                 VStack(spacing: 0) {
                     Image(systemName: "list.bullet.clipboard")
                         .resizable()
@@ -42,7 +38,6 @@ struct FooterView: View {
                 .onTapGesture {
                     viewCount = 1
                 }
-
 
                 VStack(spacing: 0) {
                     Image(systemName: "bell")
@@ -58,8 +53,7 @@ struct FooterView: View {
                 }
 
             }
-            .padding(15)
-            .padding(.vertical, 20)
+            .padding(.horizontal, 15)
         }
         .ignoresSafeArea()
     }
